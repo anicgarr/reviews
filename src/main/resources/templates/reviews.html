@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>reviews</title>
+</head>
+<style>
+body {background-color:lightCoral;}
+
+h1{
+font-family:verdana;
+border: 2px solid blue;
+}
+</style>
+<body>
+
+		<h1 style="color:green;">A List of All Reviews</h1>
+
+		<div th:each="review: ${reviews}">
+		<li>
+	<a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a>
+	</li>
+		</div>
+
+
+
+</body>
+</html>
